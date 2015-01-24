@@ -1,6 +1,12 @@
 var canvas = document.getElementById("canvas");
+var wrapper = document.getElementById("wrapper");
+
 canvas.width = WIDTH;
 canvas.height = HEIGHT;
+
+//canvas.width = wrapper.clientWidth;
+//canvas.height = wrapper.clientHeight;
+
 var ctx = canvas.getContext("2d");
 
 var keysDown = {};
@@ -38,28 +44,16 @@ var render = function() {
 };
 
 var renderBackground = function(){
-    ctx.fillStyle = "#FFFFFF";
+    ctx.fillStyle = "#008800";
     ctx.fillRect(0, 0, WIDTH, HEIGHT);
-    ctx.fillStyle = "#000000";
+    ctx.fillStyle = "#660066";
     var num = 10;
     var h = HEIGHT / num;
     for(var i = 0; i < num; i += 2){
         ctx.fillRect(0, h* i, WIDTH, h);
     }
-    console.log("kkf");
 }
 
 var restart = function(){
 
 }
-
-
-//window.onResize = function() {
-//    onResize();
-//}
-//
-//onResize();
-//
-//function onResize() {
-//
-//}
