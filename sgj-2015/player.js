@@ -76,4 +76,3 @@ var Player = function(x, y, avatar, offx, offy){
     this.render = function(ctx){
         ctx.drawImage(this.avatar,this.x+this.offx,this.y+this.yVar-this.offy,this.avatar.width,this.avatar.height);
     }
-}

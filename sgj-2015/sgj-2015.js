@@ -3,10 +3,9 @@ canvas.width = WIDTH;
 canvas.height = HEIGHT;
 
 var numPlayers = 4;
-var players = [];
-var currentPlayer = 0;
-var code = "3142"
 
+
+var players = [];
 for(var i=0; i<numPlayers; i++){
     players[i] = new Player(PL_X_POS[0][i],FLOOR_HEIGHT[0],a_i_avatars[i], PL_OFFSETS[i][0], PL_OFFSETS[i][1]);
 }
