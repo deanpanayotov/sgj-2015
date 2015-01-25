@@ -1,8 +1,4 @@
 var canvas = document.getElementById("canvas");
-var wrapper = document.getElementById("wrapper");
-var a_i_background = new Image();
-a_i_background.src = 'assets/bg_canvas.jpg';
-
 canvas.width = WIDTH;
 canvas.height = HEIGHT;
 
