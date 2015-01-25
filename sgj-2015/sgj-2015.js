@@ -48,3 +48,5 @@ var renderBackground = function(){
 var restart = function(){
 
 }
+
+$( "#date" ).datepicker();
