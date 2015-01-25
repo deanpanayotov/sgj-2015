@@ -79,7 +79,32 @@ img.bg {
     text-align: center;
     position: relative;
     width: 100%; /* IE 6.0 -.- */
-    height: auto;
+}
+
+#btn_two {
+    float: left;
+    width: 50px;
+}
+#btn_three {
+    float: left;
+    width: 50px;
+}
+#btn_four {
+    float: left;
+    width: 50px;
+}
+
+#btn_clear {
+    float: left;
+    width: 50px;
+}
+#btn_accept {
+    float: left;
+    width: 50px;
+}
+
+.clear {
+    clear: both;
 }
 
 .button>span {
@@ -97,4 +122,26 @@ img.bg {
 .square_btn {
     width: 50px;
     height: auto;
+}
+
+.attempt {
+    width: 230px;
+    padding-left: 10px;
+    padding-top: 10px;
+    height: auto;
+    border: 0;
+    background: url(assets/attempt_bkg.jpg) center center black;
+}
+
+.timer {
+    text-align: left;
+    position: relative;
+    width: 100%;
+}
+
+.timer>span {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 100%;
 }
