@@ -32,11 +32,41 @@ img.bg {
         margin-left: -960px; }
 }
 
-.test {
+.menu {
     z-index: 1;
     position:absolute;
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
+}
+
+.black_overlay{
+    z-index: 15;
+    display: none;
+    position: absolute;
+    top: 2.5vh;
+    left: 2.5%;
+    width: 95%;
+    height: 95vh;
+    background-color: black;
+    z-index:1001;
+    -moz-opacity: 0.8;
+    opacity:.40;
+    filter: alpha(opacity=80);
+}
+
+.white_content {
+    z-index: 17;
+    display: none;
+    position: absolute;
+    top: 25vh;
+    left: 25%;
+    width: 50%;
+    height: 50vh;
+    padding: 16px;
+    border: 16px solid orange;
+    background-color: white;
+    z-index:1002;
+    overflow: auto;
 }
