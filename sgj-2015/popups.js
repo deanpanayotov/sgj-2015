@@ -16,9 +16,13 @@ var btn_three = document.getElementById('btn_three');
 var btn_four = document.getElementById('btn_four');
 
 var sc_code_screen = document.getElementById('code_screen');
-var sc_round_screen = document.getElementById('round_screen');
 var sc_attack_screen = document.getElementById('attack_screen');
 var sc_game_end_screen = document.getElementById('game_end_screen');
+
+var btn_red = document.getElementById('fener_red')
+var btn_blue = document.getElementById('fener_blue')
+var btn_green = document.getElementById('fener_green')
+var btn_yellow = document.getElementById('fener_yellow')
 
 
 var onWelcome = function (){

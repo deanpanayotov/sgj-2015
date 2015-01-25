@@ -84,14 +84,23 @@ img.bg {
 #btn_two {
     float: left;
     width: 50px;
+    font-family: "Helvetica";
+    font-size: 30px;
+    font-weight: bold;
 }
 #btn_three {
     float: left;
     width: 50px;
+    font-family: "Helvetica";
+    font-size: 30px;
+    font-weight: bold;
 }
 #btn_four {
     float: left;
     width: 50px;
+    font-family: "Helvetica";
+    font-size: 30px;
+    font-weight: bold;
 }
 
 #btn_clear {
@@ -103,13 +112,24 @@ img.bg {
     width: 50px;
 }
 
+#btn_new_game {
+    font-family: "Helvetica";
+    font-size: 50px;
+    font-weight: bold;
+}
+#btn_how_to {
+    font-family: "Helvetica";
+    font-size: 50px;
+    font-weight: bold;
+}
+
 .clear {
     clear: both;
 }
 
 .button>span {
     position: absolute;
-    top: 20px;
+    top: 10px;
     left: 0;
     width: 100%;
 }
@@ -125,12 +145,12 @@ img.bg {
 }
 
 .attempt {
-    width: 230px;
     padding-left: 10px;
     padding-top: 10px;
-    height: auto;
     border: 0;
-    background: url(assets/attempt_bkg.jpg) center center black;
+    width: 320px;
+    height: 88px;
+    background: url(assets/attempt_bkg.png) no-repeat;
 }
 
 .timer {
@@ -144,4 +164,13 @@ img.bg {
     top: 40px;
     left: 40px;
     width: 100%;
+}
+
+.hr_div {
+    width: 320px;
+}
+
+.feneri {
+    width: 150px;
+    height: 150px;
 }

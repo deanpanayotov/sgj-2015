@@ -13,62 +13,70 @@
         <div class="popups">
             <div id="welcome" class="popup">
                 <div id="btn_new_game" class="button">
-                    <img class="rect_btn" src="assets/btn_bgr.gif" alt="btn_bgr"/>
-                    <span>New Game</span>
+                    <img class="rect_btn" src="assets/btn_bgr.png" alt="btn_bgr"/>
+                    <span>PLAY</span>
                 </div>
                 <div id="btn_how_to" class="button">
-                    <img class="rect_btn" src="assets/btn_bgr.gif" alt="btn_bgr"/>
+                    <img class="rect_btn" src="assets/btn_bgr.png" alt="btn_bgr"/>
                     <span>How to Play</span>
                 </div>
             </div>
             <div id="how_to" class="popup">
                 <p>Sad sad sad sad... sad sad sad...</p>
                 <div id="btn_back" class="button">
-                    <img class="square_btn" src="assets/btn_back.png" alt="btn_back"/>
+                    <img class="square_btn" src="assets/btn_cancel.png" alt="btn_back"/>
                 </div>
             </div>
             <div id="num_players" class="popup">
                 <p>Choose player count</p>
                 <div id="btn_two" class="button">
-                    <img class="square_btn" src="assets/btn_bgr_small.jpg" alt="btn_bgr_small"/>
+                    <img class="square_btn" src="assets/circle.png" alt="btn_bgr_small"/>
                     <span>2</span>
                 </div>
                 <div id="btn_three" class="button">
-                    <img class="square_btn" src="assets/btn_bgr_small.jpg" alt="btn_bgr_small"/>
+                    <img class="square_btn" src="assets/circle.png" alt="btn_bgr_small"/>
                     <span>3</span>
                 </div>
                 <div id="btn_four" class="button">
-                    <img class="square_btn" src="assets/btn_bgr_small.jpg" alt="btn_bgr_small"/>
+                    <img class="square_btn" src="assets/circle.png" alt="btn_bgr_small"/>
                     <span>4</span>
                 </div>
             </div>
             <div id="code_screen" class="popup">
                 <!-- guessing game codes -->
-                <div class="attempt">
-                    <img class="square_btn" src="assets/none_sel.jpg" alt="none_sel"/>
-                    <img class="square_btn" src="assets/none_sel.jpg" alt="none_sel"/>
-                    <img class="square_btn" src="assets/none_sel.jpg" alt="none_sel"/>
-                    <img class="square_btn" src="assets/none_sel.jpg" alt="none_sel"/>
+                <div class="hr_div">
+                    <div class="attempt">
+                        <img class="square_btn" src="" alt=""/>
+                        <img class="square_btn" src="" alt=""/>
+                        <img class="square_btn" src="" alt=""/>
+                        <img class="square_btn" src="" alt=""/>
+                    </div>
+                    <div class="clear"></div>
+                    <hr float="left" width="320px"/>
+                    <div class="attempt">
+                        <img class="square_btn" src="" alt=""/>
+                        <img class="square_btn" src="" alt=""/>
+                        <img class="square_btn" src="" alt=""/>
+                        <img class="square_btn" src="" alt=""/>
+                    </div>
                 </div>
-                <div class="clear"></div>
-                <hr />
-                <div class="attempt">
-                    <img class="square_btn" src="assets/none_sel.jpg" alt="none_sel"/>
-                    <img class="square_btn" src="assets/none_sel.jpg" alt="none_sel"/>
-                    <img class="square_btn" src="assets/none_sel.jpg" alt="none_sel"/>
-                    <img class="square_btn" src="assets/none_sel.jpg" alt="none_sel"/>
-                </div>
-                <div class="clear"></div>
-                <div id="btn_clear" class="button">
-                    <img class="square_btn" src="assets/btn_clear.png" alt="btn_clear"/>
-                </div>
-                <div id="btn_accept" class="button">
-                    <img class="square_btn" src="assets/btn_accept.jpg" alt="btn_accept"/>
-                </div>
-                <div class="clear"></div>
-                <div class="timer">
-                    <img class="rect_btn" src="assets/timer_bgr.png" alt="timer_bgr"/>
-                    <span id="time">10</span>
+                <div class="choose_div">
+                    <img class="feneri" id="fener_red" src="assets/cherven.png"/>
+                    <img class="feneri" id="fener_blue" src="assets/sin.png"/>
+                    <img class="feneri" id="fener_green" src="assets/zelen.png"/>
+                    <img class="feneri" id="fener_yellow" src="assets/jult.png"/>
+                    <div id="btn_clear" class="button">
+                        <img class="square_btn" src="assets/btn_clear.png" alt="btn_clear"/>
+                    </div>
+                    <div id="btn_accept" class="button">
+                        <img class="square_btn" src="assets/btn_accept.png" alt="btn_accept"/>
+                    </div>
+                    <!--
+                    <div class="timer">
+                        <img class="rect_btn" src="assets/timer_bgr.png" alt="timer_bgr"/>
+                        <span id="time">10</span>
+                    </div>
+                    -->
                 </div>
             </div>
             <div id="attack_screen" class="popup">
@@ -86,5 +94,6 @@
 <script type="text/javascript" src="popups.js"></script>
 <script type="text/javascript" src="asset-loader.js"></script>
 <script type="text/javascript" src="constants.js"></script>
+<script type="text/javascript" src="player.js"></script>
 <script type="text/javascript" src="sgj-2015.js"></script>
 </html>

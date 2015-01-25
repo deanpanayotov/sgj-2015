@@ -1,0 +1,4 @@
+player 1 - (45, 86)
+player 2 - (47, 77)
+player 3 - (39, 114)
+player 4 - (46, 83)
