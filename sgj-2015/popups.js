@@ -60,6 +60,7 @@ btn_back.onclick = function() {
 function choosePlayers(playerCount) {
     if (playerCount >= 2 && playerCount <= 4) {
         sc_num_players.style.display='none';
+        sc_code_screen.style.display='block';
         offFade();
     }
 }

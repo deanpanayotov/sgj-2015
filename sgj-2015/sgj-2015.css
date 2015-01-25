@@ -76,4 +76,25 @@ img.bg {
 }
 
 .button {
+    text-align: center;
+    position: relative;
+    width: 100%; /* IE 6.0 -.- */
+    height: auto;
+}
+
+.button>span {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+}
+
+.rect_btn {
+    width: 300px;
+    height: auto;
+}
+
+.square_btn {
+    width: 50px;
+    height: auto;
 }
