@@ -1,5 +1,7 @@
 var canvas = document.getElementById("canvas");
 var wrapper = document.getElementById("wrapper");
+var a_i_background = new Image();
+a_i_background.src = 'assets/bg_canvas.jpg';
 
 canvas.width = WIDTH;
 canvas.height = HEIGHT;
@@ -44,14 +46,7 @@ var render = function() {
 };
 
 var renderBackground = function(){
-    ctx.fillStyle = "#008800";
-    ctx.fillRect(0, 0, WIDTH, HEIGHT);
-    ctx.fillStyle = "#660066";
-    var num = 10;
-    var h = HEIGHT / num;
-    for(var i = 0; i < num; i += 2){
-        ctx.fillRect(0, h* i, WIDTH, h);
-    }
+    ctx.drawImage(a_i_background,0,0,900,1600);
 }
 
 var restart = function(){

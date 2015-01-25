@@ -9,3 +9,24 @@
     top:0;bottom:0; /* vertical center */
     left:0;right:0; /* horizontal center */
 }
+
+img.bg {
+    /* Set rules to fill background */
+    min-height: 100%;
+    min-width: 1920px;
+
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+@media screen and (max-width: 1920px){
+    img.bg {
+        left: 50%;
+        margin-left: -960px; }
+}
