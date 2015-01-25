@@ -79,7 +79,19 @@ img.bg {
     text-align: center;
     position: relative;
     width: 100%; /* IE 6.0 -.- */
-    height: auto;
+}
+
+#btn_two {
+    float: left;
+    width: 50px;
+}
+#btn_three {
+    float: left;
+    width: 50px;
+}
+#btn_four {
+    float: left;
+    width: 50px;
 }
 
 .button>span {
@@ -97,4 +109,17 @@ img.bg {
 .square_btn {
     width: 50px;
     height: auto;
+}
+
+.timer {
+    text-align: left;
+    position: relative;
+    width: 100%;
+}
+
+.timer>span {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
 }
