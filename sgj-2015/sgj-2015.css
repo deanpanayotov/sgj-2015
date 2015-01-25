@@ -56,7 +56,7 @@ img.bg {
     filter: alpha(opacity=80);
 }
 
-.white_content {
+.popup {
     z-index: 17;
     display: none;
     position: absolute;

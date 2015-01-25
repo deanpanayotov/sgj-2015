@@ -43,11 +43,9 @@ var render = function() {
 };
 
 var renderBackground = function(){
-    ctx.drawImage(a_i_background,0,0,900,1600);
+    ctx.drawImage(a_i_background,0,0,a_i_background.width,a_i_background.height);
 }
 
 var restart = function(){
 
 }
-
-$( "#date" ).datepicker();
