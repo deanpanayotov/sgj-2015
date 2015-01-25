@@ -8,18 +8,20 @@
     <title>SGJ</title>
 </head>
 <body>
-    <div data-role="page">
+    <div>
         <img src="assets/bg.jpg" class="bg" draggable="false" selecta>
-        <div class="menu">
-            <p>This is the main content. To display a lightbox click <a href = "javascript:void(0)" onclick = "displayBox()">here</a></p>
-            <div id="light" class="white_content">This is the lightbox content. <a href = "javascript:void(0)" onclick = "hideBox()">Close</a></div>
+        <div class="popups">
+            <div id="light" class="white_content">
+                This is the lightbox content.
+                <a class="close"  href = "javascript:void(0)" onclick = "offWelcome()">Close</a>
+            </div>
             <div id="fade" class="black_overlay"></div>
         </div>
         <canvas id="canvas"/>
     </div>
 </body>
 <link href='sgj-2015.css' rel='stylesheet' type='text/css'>
-<script type="text/javascript" src="onclicks.js"></script>
+<script type="text/javascript" src="popups.js"></script>
 <script type="text/javascript" src="asset-loader.js"></script>
 <script type="text/javascript" src="constants.js"></script>
 <script type="text/javascript" src="sgj-2015.js"></script>

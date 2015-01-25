@@ -25,6 +25,7 @@ var animate = window.requestAnimationFrame ||
 
 window.onload = function() {
     animate(step);
+    onWelcome();
 };
 
 var step = function() {
