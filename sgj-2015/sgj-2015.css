@@ -94,6 +94,19 @@ img.bg {
     width: 50px;
 }
 
+#btn_clear {
+    float: left;
+    width: 50px;
+}
+#btn_accept {
+    float: left;
+    width: 50px;
+}
+
+.clear {
+    clear: both;
+}
+
 .button>span {
     position: absolute;
     top: 20px;
@@ -111,6 +124,15 @@ img.bg {
     height: auto;
 }
 
+.attempt {
+    width: 230px;
+    padding-left: 10px;
+    padding-top: 10px;
+    height: auto;
+    border: 0;
+    background: url(assets/attempt_bkg.jpg) center center black;
+}
+
 .timer {
     text-align: left;
     position: relative;
@@ -119,7 +141,7 @@ img.bg {
 
 .timer>span {
     position: absolute;
-    top: 20px;
-    left: 0;
+    top: 40px;
+    left: 40px;
     width: 100%;
 }
