@@ -12,31 +12,58 @@
         <img src="assets/bg.jpg" class="bg" draggable="false" selecta>
         <div class="popups">
             <div id="welcome" class="popup">
-                This is the lightbox content.
-                <a class="close"  href = "javascript:void(0)" onclick = "offWelcome()">Back</a>
+                <div id="btn_new_game" class="button">
+                    <img src="assets/btn_bgr.gif" alt="btn_bgr"/>
+                    New Game
+                </div>
+                <div id="btn_how_to" class="button">
+                    <img src="assets/btn_bgr.gif" alt="btn_bgr"/>
+                    How to Play
+                </div>
+            </div>
+            <div id="how_to" class="popup">
+                <p>Sad sad sad sad... sad sad sad...</p>
+                <div id="btn_back" class="button">
+                    <img src="assets/btn_back.jpg" alt="btn_back"/>
+                </div>
+            </div>
+            <div id="num_players" class="popup">
+                <p>Choose player count</p>
+                <div id="btn_two" class="button">
+                    <img src="assets/btn_bgr_small.jpg" alt="btn_bgr_small"/>
+                    2
+                </div>
+                <div id="btn_three" class="button">
+                    <img src="assets/btn_bgr_small.jpg" alt="btn_bgr_small"/>
+                    3
+                </div>
+                <div id="btn_four" class="button">
+                    <img src="assets/btn_bgr_small.jpg" alt="btn_bgr_small"/>
+                    4
+                </div>
+            </div>
+            <div id="code_screen" class="popup">
+                <!-- guessing game codes -->
+                <div class="attempt">
+                    <!-- attempt sequence | attempt score -->
+                </div>
+                </hr>
+                <div class="attemp">
+                </div>
+                <div id="clear" class="button">
+                </div>
+                <div id="accept" class="button">
+                </div>
+                <div class="timer">
+                </div>
+            </div>
+            <div id="attack_screen" class="popup">
+                <!-- changing player's code after an attack -->
+            </div>
+            <div id="game_end_screen" class="popup">
+                <p>Player one wins</p>
             </div>
             <div id="fade" class="black_overlay"></div>
-        </div>
-        <div id="how_to">
-
-        </div>
-        <div id="num_players">
-
-        </div>
-        <div id="num_players">
-
-        </div>
-        <div id="code_screen">
-
-        </div>
-        <div id="round_screen">
-
-        </div>
-        <div id="attack_screen">
-
-        </div>
-        <div id="game_end_screen">
-
         </div>
         <canvas id="canvas"/>
     </div>
