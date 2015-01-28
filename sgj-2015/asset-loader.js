@@ -13,3 +13,6 @@ a_i_avatars[0].src = 'assets/canvas/players/1.png';
 a_i_avatars[1].src = 'assets/canvas/players/2.png';
 a_i_avatars[2].src = 'assets/canvas/players/3.png';
 a_i_avatars[3].src = 'assets/canvas/players/4.png';
+
+var a_i_selection = new Image();
+a_i_selection.src = 'assets/canvas/players/s1.png';

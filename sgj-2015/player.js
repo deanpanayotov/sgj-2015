@@ -20,6 +20,13 @@ var Player = function(x, y, avatar, offx, offy, code) {
     if (typeof this.number == 'undefined') {
         this.number = generateCode(this.DEFAULT_DIGIT_COUNT);
     }
+    this.selected = false;
+    this.highlightAngle = 0;
+    this.HIGHLIGHT_RADIUS_SPEED = 3; //px
+    this.HIGHLIGHT_SPIN_SPEED = 1; //degree
+    this.HIGHLIGHT_RADIUS_MIN = a_i_selection.width / 2;
+    this.HIGHLIGHT_RADIUS_MAX = a_i_selection.width;
+    this.highlightRadius = this.HIGHLIGHT_RADIUS_MIN;
 
     this.x = x;
     this.y = y;
@@ -82,6 +89,9 @@ var Player = function(x, y, avatar, offx, offy, code) {
     }
 
     this.render = function (ctx) {
-        ctx.drawImage(this.avatar, this.x + this.offx, this.y + this.yVar - this.offy, this.avatar.width, this.avatar.height);
+        if(this.selected){
+            //ctx.drawImage()
+        }
+        ctx.drawImage(this.avatar, this.x - this.offx, this.y + this.yVar - this.offy, this.avatar.width, this.avatar.height);
     }
 }
