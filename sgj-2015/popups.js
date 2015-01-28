@@ -64,11 +64,11 @@ btn_back.onclick = function() {
 function choosePlayers(playerCount) {
     if (playerCount >= 2 && playerCount <= 4) {
         sc_num_players.style.display='none';
-        players[0].setNewPos(PL_X_POS[1][0],FLOOR_HEIGHT[1]);
-        players[1].setNewPos(PL_X_POS[1][1],FLOOR_HEIGHT[1]);
-        players[2].setNewPos(PL_X_POS[1][2],FLOOR_HEIGHT[1]);
-        players[3].setNewPos(PL_X_POS[1][3],FLOOR_HEIGHT[1]);
-
+//        players[0].setNewPos(PL_X_POS[1][0],FLOOR_HEIGHT[1]);
+//        players[1].setNewPos(PL_X_POS[1][1],FLOOR_HEIGHT[1]);
+//        players[2].setNewPos(PL_X_POS[1][2],FLOOR_HEIGHT[1]);
+//        players[3].setNewPos(PL_X_POS[1][3],FLOOR_HEIGHT[1]);
+        prepare();
 
 
         //sc_code_screen.style.display='block';

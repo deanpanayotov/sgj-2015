@@ -3,6 +3,7 @@ canvas.width = WIDTH;
 canvas.height = HEIGHT;
 
 var numPlayers = 4;
+var playerTurn = 0;
 
 
 var players = [];
@@ -53,6 +54,7 @@ var render = function() {
     for(var i = 0; i<numPlayers; i++){
         players[i].render(ctx);
     }
+    renderPrepare(ctx);
 };
 
 var renderBackground = function(){
@@ -63,4 +65,8 @@ var renderBackground = function(){
 
 var restart = function(){
 
+}
+
+var onPrepareEnded = function(){
+    //TODO
 }
