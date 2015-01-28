@@ -81,7 +81,7 @@ img.bg {
     width: 100%; /* IE 6.0 -.- */
 }
 
-#btn_two {
+.btn_num {
     float: left;
     width: 50px;
     font-family: "Helvetica";
