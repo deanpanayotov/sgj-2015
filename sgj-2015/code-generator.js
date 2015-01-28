@@ -10,7 +10,7 @@ var generateCode = function(numDigits) {
     return shuffle(code);
 }
 
-function shuffle(array) {
+var shuffle = function(array) {
     var counter = array.length, temp, index;
 
     // While there are elements in the array
