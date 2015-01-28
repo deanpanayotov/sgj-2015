@@ -49,7 +49,6 @@ var renderPrepareOuter = function(){
 }
 
 var calculatePrepareTime = function(){
-    console.log(endPrepare);
     var timeLeft = endPrepare - (new Date());
     if(timeLeft<=0){
         return 0;
