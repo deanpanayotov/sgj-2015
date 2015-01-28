@@ -5,8 +5,9 @@
 var id_counter;
 var playerColors = [ CL_RED, CL_BLUE, CL_GREEN, CL_YELLOW];
 
-var Player = function(x, y, avatar, offx, offy) {
+var Player = function(x, y, avatar, offx, offy, code) {
 
+    this.DEFAULT_DIGIT_COUNT = 4;
     this.MAXYVAR = 30;
     this.SPEED = 2;
 
@@ -14,6 +15,11 @@ var Player = function(x, y, avatar, offx, offy) {
     this.name = "Player #" + this.id;
     this.color = playerColors[this.id % 4];
     this.avatar = avatar;
+
+    this.number = code;
+    if (typeof this.number == 'undefined') {
+        this.number = generateCode(this.DEFAULT_DIGIT_COUNT);
+    }
 
     this.x = x;
     this.y = y;
