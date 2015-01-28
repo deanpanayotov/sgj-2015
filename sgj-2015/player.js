@@ -13,16 +13,18 @@ var Player = function(x, y, avatar, offx, offy) {
     this.id = id_counter++;
     this.name = "Player #" + this.id;
     this.color = playerColors[this.id % 4];
-    this.yVar = 0;
+    this.avatar = avatar;
+
     this.x = x;
     this.y = y;
     this.offx = offx;
     this.offy = offy;
-    this.avatar = avatar;
     this.newx = x;
     this.newy = y;
+    this.yVar = 0;
     this.yDir = this.SPEED;
     this.moving = false;
+
     this.setNewPos = function (nx, ny) {
         this.newx = nx;
         this.newy = ny;
