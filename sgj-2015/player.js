@@ -20,13 +20,14 @@ var Player = function(x, y, avatar, offx, offy, code) {
     if (typeof this.number == 'undefined') {
         this.number = generateCode(this.DEFAULT_DIGIT_COUNT);
     }
-    this.selected = false;
+    this.highlighted = false;
+    this.highlightDiameterDirection = 0;
     this.highlightAngle = 0;
-    this.HIGHLIGHT_RADIUS_SPEED = 3; //px
-    this.HIGHLIGHT_SPIN_SPEED = 1; //degree
-    this.HIGHLIGHT_RADIUS_MIN = a_i_selection.width / 2;
-    this.HIGHLIGHT_RADIUS_MAX = a_i_selection.width;
-    this.highlightRadius = this.HIGHLIGHT_RADIUS_MIN;
+    this.HIGHLIGHT_DIAMETER_SPEED = 4; //px
+    this.HIGHLIGHT_SPIN_SPEED = 0.5; //degree
+    this.HIGHLIGHT_DIAMETER_MIN = a_i_selection.width / 2;
+    this.HIGHLIGHT_DIAMETER_MAX = a_i_selection.width;
+    this.highlightDiameter = this.HIGHLIGHT_DIAMETER_MIN;
 
     this.x = x;
     this.y = y;
@@ -80,6 +81,9 @@ var Player = function(x, y, avatar, offx, offy, code) {
         if (this.yVar < 0) {
             this.updateYVar();
         }
+        if(this.highlighted){
+            this.updateHighlight();
+        }
     }
     this.updateYVar = function () {
         this.yVar -= this.yDir;
@@ -87,10 +91,38 @@ var Player = function(x, y, avatar, offx, offy, code) {
             this.yDir *= -1;
         }
     }
+    this.updateHighlight = function(){
+        if(this.highlightDiameterDirection !=0) {
+            this.highlightDiameter += this.HIGHLIGHT_DIAMETER_SPEED * this.highlightDiameterDirection;
+            if(this.highlightDiameter >= this.HIGHLIGHT_DIAMETER_MAX){
+                this.highlightDiameterDirection = 0;
+            }else if(this.highlightDiameter <= this.HIGHLIGHT_DIAMETER_MIN){
+                this.highlightDiameterDirection = 0;
+                this.highlighted = false;
+            }
+        }
+        this.highlightAngle += this.HIGHLIGHT_SPIN_SPEED;
+        if(this.highlightAngle > 360){
+            this.highlightAngle -= 360;
+        };
+    }
+
+    this.highlight = function(){
+        this.highlighted = true;
+        this.highlightDiameterDirection = 1;
+    }
+
+    this.unhighlight = function(){
+        this.highlightDiameterDirection = -1;
+    }
 
     this.render = function (ctx) {
-        if(this.selected){
-            //ctx.drawImage()
+        if(this.highlighted){
+            ctx.save();
+            ctx.translate(this.x, this.y + this.yVar);
+            ctx.rotate( 2 * Math.PI * (this.highlightAngle / 360));
+            ctx.drawImage(a_i_selection, this.highlightDiameter / -2, this.highlightDiameter / -2, this.highlightDiameter, this.highlightDiameter);
+            ctx.restore();
         }
         ctx.drawImage(this.avatar, this.x - this.offx, this.y + this.yVar - this.offy, this.avatar.width, this.avatar.height);
     }

@@ -8,7 +8,7 @@ var playerTurn = 0;
 
 var players = [];
 for(var i=0; i<numPlayers; i++){
-    players[i] = new Player(PL_X_POS[2][i],FLOOR_HEIGHT[2],a_i_avatars[i], PL_OFFSETS[i][0], PL_OFFSETS[i][1]);
+    players[i] = new Player(PL_X_POS[0][i],FLOOR_HEIGHT[0],a_i_avatars[i], PL_OFFSETS[i][0], PL_OFFSETS[i][1]);
 }
 
 //canvas.width = wrapper.clientWidth;
@@ -34,7 +34,12 @@ var animate = window.requestAnimationFrame ||
 
 window.onload = function() {
     animate(step);
-    //onWelcome();
+    //onWelcome(); TODO
+    players[0].highlight();
+    setTimeout(function() {players[0].unhighlight(); players[1].highlight();}, 3000);
+    setTimeout(function() {players[1].unhighlight(); players[2].highlight();}, 6000);
+    setTimeout(function() {players[2].unhighlight(); players[3].highlight();}, 9000);
+
 };
 
 var step = function() {
