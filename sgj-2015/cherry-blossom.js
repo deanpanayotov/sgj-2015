@@ -5,14 +5,14 @@
 var CherryBlossom = function(){
 
     this.RADIUS = 3;
-    this.FADE_OUT_SPEED = 1;
+    this.FADE_OUT_SPEED = 0.01;
     this.GROUND_Y = 1570;
     this.BASE_Y_SPEED = 1;
     this.VAR_Y_SPEED = 1;
     this.MAX_X_SPEED = 3;
     this.H = 335;
-    this.MAX_S = 60;
-    this.L = 100;
+    this.S = 100;
+    this.MIN_L = 60;
 
     this.dead = false;
     this.onGround = false;
@@ -27,9 +27,10 @@ var CherryBlossom = function(){
     }
     this.xspeed = Math.random() * this.MAX_X_SPEED * -1;
     this.yspeed = this.BASE_Y_SPEED + this.VAR_Y_SPEED * Math.random();
-    this.s = Math.floor(Math.random()*this.MAX_S);
+    this.l = this.MIN_L + Math.floor(Math.random()*this.MIN_L);
     this.alpha = 1.0;
-    this.color = "hsla("+this.H+","+this.s+"%,"+this.L+"%,+"+this.alpha+")";
+    this.color = "hsl("+this.H+","+this.S+"%,"+this.l+"%)";
+	console.log(this.color);
     this.update = function(){
         if(!this.dead) {
             if (this.onGround) {
