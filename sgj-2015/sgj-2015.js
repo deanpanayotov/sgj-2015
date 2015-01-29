@@ -37,9 +37,10 @@ window.onload = function() {
     //onWelcome(); TODO
     players[0].highlight();
     setTimeout(function() {players[0].unhighlight(); players[1].highlight();}, 3000);
+    setTimeout(function() {players[0].setNewPos(PL_X_POS[1][0], FLOOR_HEIGHT[1]);}, 3000);
     setTimeout(function() {players[1].unhighlight(); players[2].highlight();}, 6000);
     setTimeout(function() {players[2].unhighlight(); players[3].highlight();}, 9000);
-
+    init();
 };
 
 var step = function() {
@@ -52,10 +53,12 @@ var update = function() {
     for(var i = 0; i<numPlayers; i++){
         players[i].update();
     }
+    blossoms.update();
 };
 
 var render = function() {
     renderBackground();
+    blossoms.render(ctx);
     for(var i = 0; i<numPlayers; i++){
         players[i].render(ctx);
     }
@@ -76,6 +79,9 @@ var onPrepareEnded = function(){
     //TODO
 }
 
+var blossoms;
+
 var init = function(){
-    //TODO
+    blossoms = new BlossomManager();
+    blossoms.start();
 }
