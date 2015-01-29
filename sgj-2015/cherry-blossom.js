@@ -4,14 +4,14 @@
 
 var CherryBlossom = function(){
 
-    this.RADIUS = 2;
+    this.RADIUS = 3;
     this.FADE_OUT_SPEED = 1;
-    this.GROUND_X = 1530;
-    this.BASE_Y_SPEED = 7;
+    this.GROUND_Y = 1570;
+    this.BASE_Y_SPEED = 1;
     this.VAR_Y_SPEED = 1;
-    this.MAX_X_SPEED = 2;
+    this.MAX_X_SPEED = 3;
     this.H = 335;
-    this.MAX_S = 35;
+    this.MAX_S = 60;
     this.L = 100;
 
     this.dead = false;
@@ -22,7 +22,7 @@ var CherryBlossom = function(){
         this.x = Math.random() * WIDTH;
         this.y = 0;
     }else{
-        this.x = WIDTH;
+        this.x = 900;
         this.y = Math.random() * HEIGHT;
     }
     this.xspeed = Math.random() * this.MAX_X_SPEED * -1;
@@ -41,7 +41,9 @@ var CherryBlossom = function(){
             } else {
                 this.x += this.xspeed;
                 this.y += this.yspeed;
-                if (this.x >= this.GROUND_X) {
+                if(this.x < 0){
+                    this.dead = true;
+                } else if (this.y >= this.GROUND_Y) {
                     this.onGround = true;
                 }
             }
@@ -65,9 +67,8 @@ var BlossomManager = function(){
     this.FIRE_RATE = 100;
     this.MAX_LEAVES_SPAWN = 5;
 
-    this.leaves = [ new CherryBlossom() ];
+    this.leaves = [];
     this.spawn = function(){
-        console.log(self);
         if(self.leaves.length < self.MAX_LEAVES){
             var count = Math.floor(Math.random() * self.MAX_LEAVES_SPAWN);
             for(var i=0; i<count;i++){
