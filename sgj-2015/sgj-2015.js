@@ -53,12 +53,13 @@ var update = function() {
     for(var i = 0; i<numPlayers; i++){
         players[i].update();
     }
-    blossoms.update();
+    blossomsFront.update();
+	blossomsBack.update();
 };
 
 var render = function() {
     renderBackground();
-    blossoms.render(ctx);
+    blossomsFront.render(ctx);
     for(var i = 0; i<numPlayers; i++){
         players[i].render(ctx);
     }
@@ -67,6 +68,7 @@ var render = function() {
 
 var renderBackground = function(){
     ctx.drawImage(a_i_background,0,0,a_i_background.width,a_i_background.height);
+	blossomsBack.render(ctx);
     ctx.drawImage(a_i_highlights,0,0,a_i_highlights.width,a_i_highlights.height);
     ctx.drawImage(a_i_house_cut,0,0,a_i_house_cut.width,a_i_house_cut.height);
 }
@@ -79,9 +81,12 @@ var onPrepareEnded = function(){
     //TODO
 }
 
-var blossoms;
+var blossomsFront;
+var blossomsBack
 
 var init = function(){
-    blossoms = new BlossomManager();
-    blossoms.start();
+    blossomsFront = new BlossomManager(50);
+	blossomsBack = new BlossomManager(50);
+    blossomsFront.start();
+	blossomsBack.start();
 }

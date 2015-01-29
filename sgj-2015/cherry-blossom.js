@@ -53,7 +53,7 @@ var CherryBlossom = function(){
 
     this.render = function(ctx){
         if(this.onGround){
-            this.color = "hsla("+this.H+","+this.s+"%,"+this.L+"%,+"+this.alpha+")";
+            this.color = "hsla("+this.H+","+this.S+"%,"+this.l+"%,+"+this.alpha+")";
         }
         ctx.fillStyle = this.color;
         ctx.beginPath();
@@ -62,9 +62,9 @@ var CherryBlossom = function(){
     }
 }
 
-var BlossomManager = function(){
+var BlossomManager = function(num){
     var self = this;
-    this.MAX_LEAVES = 100;
+    this.MAX_LEAVES = num;
     this.FIRE_RATE = 100;
     this.MAX_LEAVES_SPAWN = 5;
 
